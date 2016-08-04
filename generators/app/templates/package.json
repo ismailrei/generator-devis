@@ -1,10 +1,8 @@
 {
   "name": "wakandaframework",
-  "version": "1.0.0",
-  "description": "add put,delete... to wakanda",
   "main": "index.js",
   "scripts": {
-    "start": "node app/script.js && node index.js",
+    "start": "node app/scripts/script.js && node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
