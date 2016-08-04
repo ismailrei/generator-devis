@@ -16,14 +16,14 @@ var internals = {
     package: 'seneca',
     msgmap: {
       'no_data': 'The message has no data.',
-      'invalid_kind_act': 'Inbound messages should have kind "act", kind was: <%=kind%>.',
+      'invalid_kind_act': 'Inbound messages should have kind "act".',
       'no_message_id': 'The message has no identifier.',
-      'invalid_origin': 'The message response is not for this instance, origin was <%=origin%>.',
+      'invalid_origin': 'The message response is not for this instance.',
       'unknown_message_id': 'The message has an unknown identifier',
       'own_message': 'Inbound message rejected as originated from this server.',
       'message_loop': 'Inbound message rejected as looping back to this server.',
       'data_error': 'Inbound message included an error description.',
-      'invalid_json': 'Invalid JSON: <%=input%>.',
+      'invalid_json': 'Invalid JSON.',
       'unexcepted_async_error': 'Unexcepted error response to asynchronous message.'
     },
     override: true
