@@ -39,6 +39,10 @@ var main=function()
         });
 }
 module.exports=main;
+var seneca=require("seneca")();
+    seneca.use("main"),
+    seneca.use("../transport/main")
+    seneca.listen({type:"unix_socket",path:'/tmp/redis.sock'});
 /*fs.readFile('./confs/interface.json', 'utf8', function (err, data){
 	
 			   obj = JSON.parse(data);

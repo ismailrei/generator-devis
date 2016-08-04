@@ -61,7 +61,7 @@ exports.listen = function (options, transportUtil) {
 
     listener.once('listening', function () {
       seneca.log.debug('listen', 'open', listenOptions)
-      return callback(null, listener.address())
+      return callback(null, {strict:{result:false}})
     })
 
     listener.on('error', function (err) {
@@ -81,7 +81,6 @@ exports.listen = function (options, transportUtil) {
 
     function listen () {
       if (listenOptions.path) {
-	      console.log("ok");
         listener.listen(listenOptions.path)
       }
       else {
@@ -142,7 +141,9 @@ exports.client = function (options, transportUtil) {
 
         send_done(null, function (args, done) {
           var outmsg = transportUtil.prepare_request(this, args, done)
+          
           stringifier.write(outmsg)
+          
         })
       })
 
