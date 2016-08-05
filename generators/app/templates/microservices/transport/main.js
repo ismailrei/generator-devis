@@ -44,12 +44,11 @@ var internals = {
       host: '0.0.0.0',
       port: 10201,
       timeout: 5555
-    }
-  },
-  unix_socket:
-	{
+    },
+    unix_socket: {
 		path:'/defaultpath.sock'
-	},
+	}
+  },
   plugin: 'transport'
 }
 

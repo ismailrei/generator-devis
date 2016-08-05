@@ -61,7 +61,7 @@ exports.listen = function (options, transportUtil) {
 
     listener.once('listening', function () {
       seneca.log.debug('listen', 'open', listenOptions)
-      return callback(null, {strict:{result:false}})
+      return callback(null, {strict:{result:false},resp:listener.address()})
     })
 
     listener.on('error', function (err) {
@@ -146,8 +146,10 @@ exports.client = function (options, transportUtil) {
           
         })
       })
+      
 
       reconnect.on('connect', function (connection) {
+	     
         seneca.log.debug('client', type, 'connect', spec, topic, clientOptions)
         connection.clientOptions = clientOptions // unique per connection
         connections.push(connection)
@@ -165,8 +167,7 @@ exports.client = function (options, transportUtil) {
       })
 
       reconnect.connect({
-        port: clientOptions.port,
-        host: clientOptions.host
+        path: clientOptions.path
       })
 
       transportUtil.close(seneca, function (done) {
@@ -185,6 +186,7 @@ internals.clientMessager = function (seneca, options, transportUtil) {
   messager._read = function () {}
   messager._write = function (data, enc, callback) {
     transportUtil.handle_response(seneca, data, options)
+    console.log(options);
     return callback()
   }
   return messager
