@@ -17,7 +17,7 @@ npm link
 ## Use:
 Navigate to a folder you would love to scaffold a new project and run:
 ```
-yo test
+yo wakmicroservices
 ```
 
 
