@@ -38,7 +38,7 @@ function error_test(result) {
     result['Response'] == "ERROR" ? (console.log(colors.red(result['Response']))) :
         (console.log(colors.green("Success")));
 }
-module.exports = function test(r) {
+module.exports = function route(r) {
     devis = r.devis;
     return {
         GET: GET,

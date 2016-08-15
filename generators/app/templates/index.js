@@ -13,7 +13,7 @@ var bodyParser = require('body-parser'),
 func=require("./app/route")({devis:devis});
 
 //Initialisation of our model
-devis.act({ clientId: 1, role: "model", action: "Initialise", options: data.options[0]},(data)=>{console.log(data);});
+devis.act({ clientId: 1, role: "model", action: "Initialise", options: data.options[0]},(data)=>{});
 var Data = ['ismailrei', '182290a+'];
 var ID = ["Test"];
 devis.act({ clientId: 1, role: "auth", action: "login", Data: Data, options: data.options[0] }, function (err, sessionID) {
