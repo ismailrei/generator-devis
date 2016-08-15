@@ -7,14 +7,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ismailrei/seneca-wakanda.git"
+    "url": "git+ssh://git@github.com/ismailrei/devis.git"
   },
   "author": "ismail reida",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ismailrei/seneca-wakanda/issues"
+    "url": "https://github.com/ismailrei/devis/issues"
   },
-  "homepage": "https://github.com/ismailrei/seneca-wakanda#readme",
+  "homepage": "https://github.com/ismailrei/devis",
   "dependencies": {
     "body-parser": "^1.15.2",
     "co": "^4.6.0",
