@@ -10,7 +10,7 @@ module.exports = yeoman.Base.extend({
   prompting: function () {
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the wakanda\n' + chalk.red('microservice framework') + ' generator!'
+      'Welcome to devis\n' + chalk.red('microservice framework') + ' generator!'
     ));
 
     var prompts = [{
