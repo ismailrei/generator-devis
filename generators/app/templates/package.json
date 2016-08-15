@@ -2,7 +2,7 @@
   "name": "devis",
   "main": "index.js",
   "scripts": {
-    "start": "node app/scripts/script.js && node app/root.js | node index.js",
+    "start": "node app/scripts/script.js && node app/root.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
