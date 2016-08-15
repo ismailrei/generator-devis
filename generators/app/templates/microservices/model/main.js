@@ -2,20 +2,23 @@ var querystring = require('querystring');
    	http = require("http"),
    	fs=require("fs"),
    	m=require("./libs/functions");
-var main=function()
-{       var options,
-            seneca=this,
+       
+var model=require('../../../devis/devis');
+
+       var options,
+        
             cookie;
 
-        seneca.add({role:"model",action:"Initialise"},function(args,done){
+        model.add({role:"model",action:"Initialise"},(args,done)=>{
             options=args.options;
+            done(null,{res:options})
                     });
-        seneca.add({role:"model",action:"PUT"},function(args,done){//for update
+        model.add({role:"model",action:"PUT"},(args,done)=>{//for update
             if(args.table) options['link']=options['path']+"/"+args.table;
             m.Post(options,args.Add,done);
             });
 
-        seneca.add({role:"model",action:"GET"},function(args,done){//for query(FOR TEST ONLY)
+        model.add({role:"model",action:"GET"},(args,done)=>{//for query(FOR TEST ONLY)
             var res="",
                 toReplace=["[","]"],
                 transmission={Response:"",stric:{result:false}};
@@ -26,28 +29,16 @@ var main=function()
             
         });
 
-        seneca.add({role:"model",action:"DELETE"},function(args,done){//for update
+        model.add({role:"model",action:"DELETE"},(args,done)=>{//for update
            
            m.GET(m.Link(options,args.table+"/?$filter=\"ID="+args.ID+"\"&"+options.delete),"undefined",done,{Response:"Success"});
         });
         
-        seneca.add({role:"model",action:"POST"},function(args,done){
+        model.add({role:"model",action:"POST"},(args,done)=>{
             args.table?options['link']=options['path']+"/"+args.table:
                       (options["link"]=args.link);
                       
             m.Post(options,args.Add,done,args.opt);
         });
-}
-module.exports=main;
 
-/*fs.readFile('./confs/interface.json', 'utf8', function (err, data){
-	
-			   obj = JSON.parse(data);
-			   if(obj.client)
-			   {
-				var seneca=require("seneca")();
-				seneca.use('main');
-			   	seneca.listen(obj.client);
-			   	
-			   	}
-});*/
+module.exports=model;
