@@ -1,4 +1,19 @@
 ![wakanda](https://wakanda.github.io/images/logo.png)![Yeoman](https://scotch.io/wp-content/uploads/2015/11/yeoman-logo.png)
+
+
+
+```
+                               _-----_     ╭──────────────────────────╮
+                              |       |    │     Welcome to devis     │
+                              |--(o)--|    │  microservice framework  │
+                             `---------´   │        generator!        │
+                              ( _´U`_ )    ╰──────────────────────────╯
+                              /___A___\   /
+                               |  ~  |     
+                             __'.___.'__   
+                           ´   `  |° ´ Y ` 
+
+```
 ## Start:
 Install both yeoman and the generator:
 ```
