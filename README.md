@@ -1,6 +1,3 @@
-![wakanda](https://wakanda.github.io/images/logo.png)![Yeoman](https://scotch.io/wp-content/uploads/2015/11/yeoman-logo.png)
-
-
 
 ```
                                _-----_     ╭──────────────────────────╮
@@ -14,7 +11,19 @@
                            ´   `  |° ´ Y ` 
 
 ```
-## Start:
+
+## Getting Started
+
+### What is Yeoman?
+[![](https://raw.githubusercontent.com/yeoman/media/master/optimized/yeoman-masthead.png)](http://yeoman.io)
+Yeoman helps you to kickstart new projects, prescribing best practices and tools to help you stay productive.
+
+To do so, we provide a [generator ecosystem](http://yeoman.io/generators/). A generator is basically a plugin that can be run with the `yo` command to scaffold complete projects or useful parts.
+
+
+## Usage
+**if you upload the project**
+
 Install both yeoman and the generator:
 ```
 npm install -g yo generator-generator
