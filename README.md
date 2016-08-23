@@ -21,7 +21,7 @@
 
 Yeoman helps you to kickstart new projects, prescribing best practices and tools to help you stay productive.
 
-To do so, we provide a [generator ecosystem](http://yeoman.io/generators/). A generator is basically a plugin that can be run with the `yo` command to scaffold complete projects or useful parts.
+To do so, Yeoman provide a [generator ecosystem](http://yeoman.io/generators/). A generator is basically a plugin that can be run with the `yo` command to scaffold complete projects or useful parts.
 
 
 ## Usage
