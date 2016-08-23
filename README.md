@@ -41,7 +41,7 @@ Link the generator in the global node modules:
 ```
 npm link
 ```
-## Use:
+
 Navigate to a folder you would love to scaffold a new project and run:
 ```
 yo devis
