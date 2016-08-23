@@ -47,21 +47,21 @@ Navigate to a folder you would love to scaffold a new project and run:
 yo devis
 ```
 ### Using the project
-Once installed, you can start creating microservices by using **devis framework** and based on both microservices that already exist in the project model and authentification. 
+Once installed, you can start creating microservices by using **devis framework**. You can rely on both microservices that already exist in the project: model and authentification. 
 
-after, you should add your microservices to the file *root.js*, located in the folder *app*. Fortunately there already a script that will perform this task in your place , you just have to run the command :
+After, you should add your microservices to the file *root.js*, located in the folder *app*. Fortunately there already a script that will perform this task in your place , you just have to run the command :
 
 ```bash
 npm start
 ```
 
-if you just wanna test both existing microservices, you should install [ wakanda ] ( https://wakanda.github.io ), add one or more tables , a use, change login and password on ```app/wakanda_config.js``` and launch
+If you just wanna test both existing microservices, you should install [ wakanda ] ( https://wakanda.github.io ), add one or more tables , a use, change login and password on ```app/wakanda_config.js``` and launch
 
 ```bash
 npm start
 node index.js
 ```
 
-the script will generate automatically the file *root.js*: use  both microservices and launch the server.
+The script will generate automatically the file *root.js*: use  both microservices and launch the server.
 By running the index file you will consume the server and log in **wakanda**.
 
