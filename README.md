@@ -55,7 +55,7 @@ after, you should add your microservices to the file *root.js*, located in the f
 npm start
 ```
 
-if you just wanna test both existing microservices, you should install [ wakanda ] ( https://wakanda.github.io ), add one or more tables , a user and launch
+if you just wanna test both existing microservices, you should install [ wakanda ] ( https://wakanda.github.io ), add one or more tables , a use, change login and password on ```app/wakanda_config.js``` and launch
 
 ```bash
 npm start
