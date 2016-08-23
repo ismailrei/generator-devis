@@ -46,7 +46,7 @@ Navigate to a folder you would love to scaffold a new project and run:
 ```bash
 yo devis
 ```
-# Using the project
+### Using the project
 Once installed, you can start creting microservices by using **devis framework** and based on both microservices that already exist in the project model and authentification. 
 
 after, you should add your microservices to the file *root.js*, located in the folder *app*. Fortunately there already a script that will perform this task in your place , you just have to run the command :
