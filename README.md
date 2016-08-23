@@ -62,6 +62,6 @@ npm start
 node index.js
 ```
 
-the script will generate automatically the *use* of both microservices and launch the server.
+the script will generate automatically the file *root.js*: use  both microservices and launch the server.
 By running the index file you will consume the server and log in **wakanda**.
 
