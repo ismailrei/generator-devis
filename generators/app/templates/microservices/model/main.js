@@ -1,11 +1,11 @@
-var querystring = require('querystring');
+const querystring = require('querystring');
 http = require("http"),
    	fs = require("fs"),
    	m = require("./libs/functions");
 
-var model = require('../../../devis/devis');
+const model = require('../../../devis/devis');
 
-var options,
+let options,
 
     cookie;
 
@@ -20,7 +20,7 @@ model.add({ role: "model", action: "PUT" }, (args, done) => {//for update
 });
 
 model.add({ role: "model", action: "GET" }, (args, done) => {//for query(FOR TEST ONLY)
-    var res = "",
+    let res = "",
         toReplace = ["[", "]"],
         transmission = { Response: "", stric: { result: false } };
 
