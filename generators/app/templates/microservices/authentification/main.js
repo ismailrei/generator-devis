@@ -1,10 +1,10 @@
-var querystring = require('querystring');   
+const querystring = require('querystring');   
    	http = require("http"),
    	fs=require("fs"),
    	q=require("./libs/functions");
-var authentification=require('../../../devis/devis');
+const authentification=require('../../../devis/devis');
 
-    var options,buffer;
+let options,buffer;
     authentification.add({role:"auth",action:"login"},(args,done)=>
     {
         options=args.options;
@@ -14,7 +14,7 @@ var authentification=require('../../../devis/devis');
     })
     authentification.add({role:"auth",action:"currentUser"},(args,done)=>
     {
-       var transmission={Response:""};
+       let transmission={Response:""};
        q.GET(q.Link(options,options.currentUser),"undefined",done,transmission);
     })
     authentification.add({role:"auth",action:"currentUserBelongsTo"},(args,done)=>
@@ -25,7 +25,7 @@ var authentification=require('../../../devis/devis');
     })
     authentification.add({role:"auth",action:"logout"},(args,done)=>
     {
-        var transmission={Response:""};
+        let transmission={Response:""};
         q.GET(q.Link(options,options.logout),"undefined",done,transmission);
     })
 
