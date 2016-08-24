@@ -72,4 +72,33 @@ If you want to know handles that a Microservice offers, like *model* , you just 
 ```bash
 npm run-script log microservices/model/main
 ```
+If this microservice are distant, for example
+```javascript
+var devis=require("devis");
+
+devis.add({
+  action: 'game',
+  cmd:'play'
+}, function(args, done) {
+
+  done(null, { result: 'play' });
+});
+devis.add({
+  action: 'game',
+  cmd:'pause'
+}, function(args, done) {
+
+  done(null, { result: 'pause' });
+});
+devis.listen({
+  host:'127.0.0.1',
+  port:3030
+})
+```
+You should use
+```bash
+npm run-script log connect port : '3030' , host : "127.0.0.1" 
+```
+**Don't forget space between each argument!**
+
 A file will be created under the name **devis-log.txt** or you will find all the information regarding this Microservice.
