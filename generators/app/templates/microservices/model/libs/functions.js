@@ -1,8 +1,8 @@
-var http = require("http");
+const http = require("http");
 function Conditions(conditions)
 {
-        var res="&$filter="+"\"";
-        var cond=conditions,
+        let res="&$filter="+"\"";
+        let cond=conditions,
             check=0;
             Object.keys(cond).forEach(function(key) {
                 if(check!=0)
