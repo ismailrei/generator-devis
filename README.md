@@ -65,3 +65,11 @@ node index.js
 The script will generate automatically the file *root.js*: use  both microservices and launch the server.
 By running the index file you will consume the server and log in **wakanda**.
 
+### Log file
+
+If you want to know handles that a Microservice offers, like *model* , you just have to write the following command:
+
+```bash
+npm run-script log microservices/model/main
+```
+A file will be created under the name **devis-log.txt** or you will find all the information regarding this Microservice.
