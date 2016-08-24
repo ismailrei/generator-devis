@@ -95,7 +95,7 @@ devis.listen({
   port:3030
 })
 ```
-You should use
+You should run
 ```bash
 npm run-script log connect port : '3030' , host : "127.0.0.1" 
 ```
