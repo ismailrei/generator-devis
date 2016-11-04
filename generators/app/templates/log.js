@@ -1,4 +1,5 @@
-let devis = require("../devis");
+"use strict";
+let devis = require("devis");
 
 if (process.argv[2] == "connect") {
     let i = 3;

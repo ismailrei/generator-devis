@@ -1,10 +1,13 @@
 {
-  "name": "devis",
+  "name": "devisProject",
   "main": "index.js",
   "scripts": {
-    "start": "node app/scripts/script.js && node app/root.js ",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "log":"node log.js"
+    "start":"node index.js",
+    "generate": "node app/scripts/script.js && node app/root.js ",
+    "test": "node index.js",
+    "get": "node log.js",
+    "create": "node app/scripts/createmicro.js",
+    "db":"node app/scripts/database.js"
   },
   "repository": {
     "type": "git",
@@ -20,10 +23,13 @@
     "body-parser": "^1.15.2",
     "co": "^4.6.0",
     "colors": "^1.1.2",
+    "devis": "^1.0.4",
     "ejs": "^2.5.1",
     "express": "^4.14.0",
     "fs": "0.0.2",
     "http": "0.0.0",
+    "mkpath": "^1.0.0",
+    "mongoose": "^4.6.2",
     "querystring": "^0.2.0",
     "request": "^2.73.0",
     "searching": "^1.0.4",

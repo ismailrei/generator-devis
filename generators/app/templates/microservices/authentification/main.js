@@ -1,17 +1,18 @@
+"use strict";
 let querystring = require('querystring');
 
-http = require("http"),
+let http = require("http"),
    	fs = require("fs"),
    	a = require("./libs/functions");
 
-let authentification = require('../../../devis/devis');
-let options, buffer;
+let authentification = require('devis');
+let options={}, buffer={};
 
 authentification.add({ role: "auth", action: "login" }, (args, done) => {
     options = args.options;
-    authentification.act({ role: "model", action: "POST"}, {link: a.Link(options, options.loginLink), opt: "login", Add: args.Data }, function (pro) {
+    authentification.act({ role: "model", action: "POST"}, {link: a.Link(options, options.loginLink), opt: "login", Add: args.Data }, function (err,pro) {
         //console.log(pro);
-        done(pro);
+        done(err,pro);
     });
 });
 
@@ -21,8 +22,9 @@ authentification.add({ role: "auth", action: "currentUser" }, (args, done) => {
 });
 
 authentification.add({ role: "auth", action: "currentUserBelongsTo" }, (args, done) => {
-    authentification.act({ role: "model", action: "POST"}, {link: a.Link(options, options.belongsTo), opt: "group", Add: args.ID },(pro)=>{
-        done(pro);
+  console.log(args);
+    authentification.act({ role: "model", action: "POST"}, {link: a.Link(options, options.belongsTo), opt: "group", Add: args.ID },(err,pro)=>{
+        done(err,pro);
     });
 });
 

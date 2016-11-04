@@ -1,3 +1,4 @@
+"use strict";
 var http = require("http");
 
 
@@ -25,7 +26,7 @@ function GET(...args)
 
             response.on("end", function (err) {
                 transmission.Response=JSON.parse(buffer);
-                done(transmission);
+                done(null,transmission);
                 });
         })
 }
